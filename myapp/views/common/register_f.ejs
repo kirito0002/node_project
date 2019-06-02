@@ -1,0 +1,69 @@
+</body>
+<script type="text/javascript">
+    var username = document.getElementById("username");
+    var usernametip = document.getElementById("usernametip");
+    var password = document.getElementById("password");
+    var passwordtip = document.getElementById("passwordtip");
+    var confirmpwd = document.getElementById("confirmpwd");
+    var confirmpwdtip = document.getElementById("confirmpwdtip");
+    var phone = document.getElementById("phone");
+    var phonetip = document.getElementById("phonetip");
+
+    username.onfocus = function () {
+        usernametip.innerHTML = this.getAttribute("tips")
+    }
+    username.onblur = function () {
+        if (username.value.length < 4) {
+        username.parentNode.style.border = "1px solid red";
+        usernametip.innerHTML = "长度不能小于4";
+        usernametip.style.color = "red"
+        }else {
+        username.parentNode.style.border = "1px solid #666";
+        usernametip.innerHTML = this.getAttribute("tips");
+        usernametip.style.color = "#ddd"    
+        }
+    }
+    password.onfocus = function () {
+        passwordtip.innerHTML = this.getAttribute("tips")
+    }
+    password.onblur = function(){
+        if (password.value.length < 10) {
+        password.parentNode.style.border = "1px solid red";
+        passwordtip.innerHTML = "长度不能小于10";
+        passwordtip.style.color = "red"
+        }else {
+        password.parentNode.style.border = "1px solid #666";
+        passwordtip.innerHTML = this.getAttribute("tips");
+        passwordtip.style.color = "#ddd"    
+        }
+    }
+    confirmpwd.onfocus = function(){
+        confirmpwdtip.innerHTML = this.getAttribute("tips")
+    }
+    confirmpwd.onblur = function(){
+        if (confirmpwd.value != password.value) {
+        confirmpwd.parentNode.style.border = "1px solid red";
+        confirmpwdtip.innerHTML = "两次输入密码不一致";
+        confirmpwdtip.style.color = "red"
+        }else {
+        confirmpwd.parentNode.style.border = "1px solid #666";
+        confirmpwdtip.innerHTML = this.getAttribute("tips");
+        confirmpwdtip.style.color = "#ddd"
+        }
+    }
+    phone.onfocus = function(){
+        phonetip.innerHTML = this.getAttribute("tips")
+    }
+    phone.onblur = function(){
+        if (phone.value.length < 11) {
+        phone.parentNode.style.border = "1px solid red";
+        phonetip.innerHTML = "长度不能小于11";
+        phonetip.style.color = "red"
+        }else {
+        phone.parentNode.style.border = "1px solid #666";
+        phonetip.innerHTML = this.getAttribute("tips");
+        phonetip.style.color = "#ddd"
+        }
+    }
+    </script>
+</html>

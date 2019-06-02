@@ -1,0 +1,24 @@
+<%- include ./common/login.ejs  %>
+        <div class="container demo-1">
+            <div class="content">
+                <div id="large-header" class="large-header">
+                    <canvas id="demo-canvas"></canvas>
+                    <div class="logo_box">
+                        <h1>XXX医院入院出院管理</h1>
+                        <form action="#" name="f" method="post" action="http://localhost:4000/login">
+                            <div class="input_outer">
+                                <span class="u_user"></span>
+                                <input name="username" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户">
+                            </div>
+                            <div class="input_outer">
+                                <span class="us_uer"></span>
+                                <input name="password" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
+                            </div>
+                            <div class="mb2"><button type="submit" class="act-but submit" style="color: #FFFFFF">登录</button></div>
+                            <div class="mb2"><a class="act-but submit" href="/register" style="color: #FFFFFF">注册</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /container -->
+        <%- include  ./common/login_f.ejs  %>

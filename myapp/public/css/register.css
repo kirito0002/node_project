@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0 auto;
+	background: url(../img/register_bg.jpg);
+}
+.w {
+	width: 850px;
+	margin: 0 auto;
+}
+.content {
+	width: 400px;
+	height: 500px;
+	margin: 0 auto;
+	margin-left: 200px;
+	margin-top: 50px;
+	border:3px solid skyblue;
+	border-radius: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: transparent;
+}
+#header {
+	height: 70px;
+	width: 398px;
+}
+#header span {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "华文行楷"
+}
+.loginbutton {
+	float: right;
+    margin-top: 10px;
+}
+.loginbutton a {
+	text-decoration: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 50px;
+    background: #0096e6;
+    color: white;
+}
+/*表单元素样式*/
+.form-item {
+    position: relative;
+    border: solid 1px skyblue;
+    border-radius: 50px;
+    width: 398px;
+    height: 52px;
+    z-index: 0;
+}
+
+.form-item label {
+    float: left;
+    width: 90px;
+    height: 52px;
+    line-height: 52px;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.myinput {
+	border: 0;
+	outline: none;
+	font-size: 18px;
+    width: 190px;
+    height: 19px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-top: 16px;
+    cursor: text;
+    background-color: transparent ;
+    
+}
+
+.mytip {
+	position: absolute;
+	z-index: 2; 
+	line-height: 46px; 
+	margin-left: 20px; 
+	margin-top: 1px; 
+	font-size: 14px; 
+	font-family: &quot;Microsoft YaHei&quot;, &quot;Hiragino Sans GB&quot;
+	color: rgb(204, 204, 204); 
+	display: inline;
+}
+
+.input-tip {
+    color: #666;
+    height: 27px;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+.error-tip {
+	color: red;
+	border: red solid 1px;
+}
+
+.btn-register {
+    width: 100%;
+    height: 54px;
+    color: #fff;
+    background: #e22;
+    border: 0;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei","Hiragino Sans GB";
+    cursor: pointer;
+    z-index: 999;
+}
+

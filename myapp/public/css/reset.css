@@ -1,0 +1,11 @@
+html,body,div,li,ul,a,img{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+h1,h2,h3,h4 {
+	font-family: "Microsoft Yahei",Arial
+}
+

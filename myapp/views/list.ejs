@@ -1,0 +1,61 @@
+<%- include ./common/header.ejs  %>
+<div class="container-fluid">
+    <div class="col-sm-10 col-sm-offset-1" style="margin-top:50px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                病人信息管理
+                <a href="/add" class="btn btn-success" style="float: right;background-color: skyblue;">添加新病人信息</a>
+            </div>
+            <div class="panel-body">
+                <form role="form" class="form-inline" method="GET" enctype="application/x-www-form-urlencoded" action="http://localhost:4000/patient/search">
+                    <div class="form-group">
+                        <label for="name">名称</label>
+                        <input type="title" name="title" class="form-control" id="title" placeholder="请输入名称">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default">开始搜索</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>图片</th>
+                        <th>姓名</th>
+                        <th>病房号</th>
+                        <th>健康状态</th>
+                        <th>入院时间</th>
+                        <th>出院时间</th>
+                        <th class="text-center">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% for(var i=0;i<arr.length;i++){  %>
+                    <tr>
+                        <td><%=i+1%></td>
+                        <td><img src="<%=arr[i].pic%>" style="width:30px;" class="img-circle"></td>
+                        <td><%=arr[i].title%></td>
+                        <td><%=arr[i].price%></td>
+                        <td><%=arr[i].fee%></td>
+                        <td><%=arr[i].createAt%></td>
+                        <td><%=arr[i].updateAt%></td>
+                        <td class="text-center">
+                            <a href="/patient/update/<%=arr[i].id%>" class="btn btn-success">修改</a>
+                            <a href="/patient/delete/<%=arr[i].id%>?img=<%=arr[i].pic%>" class="btn btn-danger">删除</a>
+                        </td>
+                    </tr>
+                    <% }%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<%- include  ./common/footer.ejs  %>
